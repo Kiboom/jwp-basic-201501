@@ -24,6 +24,7 @@ ContextLoaderListener는 ServletContextListener를 구현하는 클래스이다.
 * 10) 마지막으로 RequestDispatcher를 통해 list.jsp를 클라이언트에 전달한다.
 * <B>(Q. 아직 filter가 어떤 흐름에 의해 실행되는지는 파악하지 못했습니다..)</B>
 
-#### 7. ListController와 ShowController가 멀티 쓰레드 상황에서 문제가 발생하는 이유에 대해 설명하라.
-* 
+#### 8. ListController와 ShowController가 멀티 쓰레드 상황에서 문제가 발생하는 이유에 대해 설명하라.
+* 기본적으로 Servlet은 톰캣 컨테이너에서 하나의 인스턴스로 만들어져서 여러 쓰레드가 공유하는 방식이다. 
+* 이런 경우 만약 Servlet 안에 전역변수처럼 인스턴스 변수를 만들어 놓으면 여러 쓰레드가 접근 가능하기 때문에 상대방이 수정한 결과가 나에게 전달되어 보이는 문제가 발생할 수 있다.
 
