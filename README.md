@@ -22,7 +22,7 @@ ContextLoaderListener는 ServletContextListener를 구현하는 클래스이다.
 * 8) render( ) 메서드가 실행되면 일단 “viewName" 변수를 통해 어떤 jsp를 보낼 것인지 파악한다. 
 * 9) viewName이 만약 Redirect 형식이 아니라면 인자로 전달 받은 데이터를 setAttribute 처리한다. 
 * 10) 마지막으로 RequestDispatcher를 통해 list.jsp를 클라이언트에 전달한다.
-* (Q. 아직 filter가 어떤 흐름에 의해 실행되는지는 파악하지 못했습니다..)
+* <B>(Q. 아직 filter가 어떤 흐름에 의해 실행되는지는 파악하지 못했습니다..)</B>
 
 #### 7. ListController와 ShowController가 멀티 쓰레드 상황에서 문제가 발생하는 이유에 대해 설명하라.
 * 
